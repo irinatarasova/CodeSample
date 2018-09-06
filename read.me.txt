@@ -1,0 +1,31 @@
+cd \ApiTest\
+
+npm install
+sudo npm install -g mocha
+npm install --save-dev mocha
+npm install --save-dev should
+npm install --save-dev supertest
+npm install --save json-string
+npm install string-to-json
+npm install chai
+npm install -S postgresql-easy
+
+
+to run
+cd \ApiTest\test\
+mocha testscript.js --timeout 35000
+
+********************************************
+********************************************
+about application and tests:
+********************************************
+Application has micro-service structure.
+For the present back-end developed 4 microservices and each one is listening specified port {9001,9002,9003,9004}
+This tests are api tests;
+
+config.properties - config file with application url and some settings and test data (test data are supposed to be stored separately)
+utils.js - contains helper-methods that generate random test data (email, phone, names)
+messages.json - contains different messages that are supposed to be in API Response 
+testscript.js - test script file with tests; tests are combined in describe block by flow;
+
+
